@@ -328,7 +328,22 @@ print(obj.runningSum([1,2,3,4]))
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Second-largest distinct number
 
+
+def second_largest_num(numbers):
+    largest=None
+    second_largest=None
+    for number in numbers:
+            if largest is  None or number>largest:
+                  second_largest=largest
+                  largest=number
+            elif number!=largest and (second_largest is None or number>second_largest):
+                  second_largest=number
+            if second_largest is None:
+                  return f'no second-largest distinct number'
+    return second_largest
+print(second_largest_num([5,5,5,5]))
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
