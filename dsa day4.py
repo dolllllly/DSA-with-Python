@@ -306,4 +306,44 @@ def check_two_array():
     b=two_array([2,1,3,2])
     return a==b
 print(check_two_array())
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# leetcode 217: contain duplicate 
+# check whether a list contains duplicates:  leetcode 217
+
+def containsDuplicate( nums: list[int]) -> bool:
+        nonduplicate=set(nums)
+        if len(nums)!=len(nonduplicate):
+            return True
+        return False
+print(containsDuplicate([1,2,3,4]))
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#leetcode 242: valid anagram
+# check whether two string conatain the sem letters with the sem frequencies.
+
+def is_alangram(s,t):
+    if len(s)!=len(t):
+        return False
+    frequency={}
+    for ch in s:
+        frequency[ch]=frequency.get(ch,0)+1
+    for ch in t:
+        if ch not in frequency:
+            return False
+        frequency[ch]-=1
+        if frequency[ch]<0:
+            return False
+    return True
+print(is_alangram("listen","silent"))
+print(is_alangram("abb","baa"))
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    
     
